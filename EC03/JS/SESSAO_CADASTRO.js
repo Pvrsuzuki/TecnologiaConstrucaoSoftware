@@ -81,7 +81,7 @@ function formatBrazilianDateTime(isoString) {
         <td>${salaNome}</td>
         <td>${formattedDateTime}</td>
         <td>${sessao.preco}</td>
-        <td>${sessao.idioma}</td>
+        <td>${sessao.tipo}</td>
         <td>${sessao.formato}</td>
         <td>
           <div class="d-flex">
@@ -103,7 +103,7 @@ function formatBrazilianDateTime(isoString) {
       salaIndex: document.getElementById('salaSelect').value,
       dataHora: document.getElementById('dataHora').value,
       preco: document.getElementById('preco').value,
-      idioma: document.getElementById('idioma').value,
+      tipo: document.getElementById('tipo').value,
       formato: document.getElementById('formato').value
     };
     
@@ -133,7 +133,7 @@ function formatBrazilianDateTime(isoString) {
     document.getElementById('salaSelect').value = sessao.salaIndex;
     document.getElementById('dataHora').value = sessao.dataHora;
     document.getElementById('preco').value = sessao.preco;
-    document.getElementById('idioma').value = sessao.idioma;
+    document.getElementById('tipo').value = sessao.tipo;
     document.getElementById('formato').value = sessao.formato;
     document.getElementById('sessaoModalLabel').innerText = "Editar Sessão";
     const myModal = new bootstrap.Modal(document.getElementById('sessaoModal'));

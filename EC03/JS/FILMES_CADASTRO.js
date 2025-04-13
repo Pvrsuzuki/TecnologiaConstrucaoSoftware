@@ -11,7 +11,7 @@ function refreshFilmesTable() {
         <td>${filme.genero}</td>
         <td>${filme.classificacao}</td>
         <td>${filme.duracao}</td>
-        <td>${filme.estreia}</td>
+        <td>${filme.data}</td>
         <td>
           <div class="d-flex">
             <button class="btn btn-sm btn-warning me-1" onclick="editFilme(${index})">Editar</button>
@@ -47,7 +47,7 @@ function refreshFilmesTable() {
       genero: document.getElementById('genero').value,
       classificacao: document.getElementById('classificacao').value,
       duracao: document.getElementById('duracao').value,
-      estreia: document.getElementById('estreia').value,
+      data: document.getElementById('data').value,
       imagem: "" // Será preenchido se houver imagem
     };
   
@@ -86,7 +86,7 @@ function refreshFilmesTable() {
     document.getElementById('genero').value = filme.genero;
     document.getElementById('classificacao').value = filme.classificacao;
     document.getElementById('duracao').value = filme.duracao;
-    document.getElementById('estreia').value = filme.estreia;
+    document.getElementById('data').value = filme.data;
     // Nota: o campo de imagem não é preenchido automaticamente por questões de segurança.
     document.getElementById('filmeModalLabel').innerText = "Editar Filme";
     const myModal = new bootstrap.Modal(document.getElementById('filmeModal'));
